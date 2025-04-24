@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BOT CICI RIZQI O - KenthirAi No Limit dengan fitur canggih">
+  <title>🔥 BOT CICI RIZQI O - KenthirAi No Limit 🔥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff4444;
+      --primary-dark: #ff1a1a;
+      --accent: #ff884d;
+      --bg: #0d0d0d;
+      --card-bg: rgba(20, 20, 20, 0.85);
+      --text: #ffffff;
+      --text-secondary: rgba(255, 255, 255, 0.7);
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(255, 50, 50, 0.3);
+      max-width: 500px;
+      width: 90%;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .container:hover {
+      transform: translateY(-5px) rotateX(2deg) rotateY(2deg);
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 25px;
+      color: var(--primary);
+      text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      border-radius: 3px;
+    }
+
+    .links-container {
+      display: grid;
+      gap: 15px;
+      margin: 25px 0;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+    }
+
+    a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(255, 68, 68, 0.4);
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: 0.5s;
+    }
+
+    a:hover::before {
+      left: 100%;
+    }
+
+    .special {
+      font-size: 1.2rem;
+      margin-top: 25px;
+      color: var(--accent);
+      text-shadow: 0 0 8px rgba(255, 136, 77, 0.4);
+      font-weight: 600;
+      animation: pulse 2s infinite;
+    }
+
+    .particle-count-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--card-bg);
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      gap: 10px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .particle-count-control button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .particle-count-control button:hover {
+      background: var(--primary-dark);
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+      
+      a {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="container">
+    <h1>🔥 BOT CICI RIZQI O 🔥</h1>
+    <div class="links-container">
+      <a href="https://ciciai.com/bot/tdD6cgXr" target="_blank" rel="noopener noreferrer">
+        <span>Bot Link 1</span>
+      </a>
+      <a href="https://ciciai.com/bot/9DNEoh0U" target="_blank" rel="noopener noreferrer">
+        <span>Bot Link 2</span>
+      </a>
+      <a href="https://ciciai.com/bot/9mo7gxSx" target="_blank" rel="noopener noreferrer">
+        <span>Bot Link 3</span>
+      </a>
+      <a href="https://ciciai.com/bot/9QqWWGO6" target="_blank" rel="noopener noreferrer">
+        <span>Bot Link 4</span>
+      </a>
+    </div>
+    <div class="special">🔥🔥🤘<br>KenthirAi no limit</div>
+  </div>
+
+  <div class="particle-count-control">
+    <button id="decrease-particles">-</button>
+    <span id="particle-count">100</span>
+    <button id="increase-particles">+</button>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('bg');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let particleCount = 100;
+    let hue = 0;
+
+    // Improved particle class with more physics
+    class Particle {
+      constructor() {
+        this.reset();
+        this.size = Math.random() * 2 + 1;
+        this.originalSize = this.size;
+      }
+      
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = -1.5 + Math.random() * 3;
+        this.vy = -1.5 + Math.random() * 3;
+        this.alpha = 0.1 + Math.random() * 0.5;
+        this.color = `hsla(${hue + Math.random() * 30}, 100%, 60%, ${this.alpha})`;
+        this.life = 0;
+        this.maxLife = 100 + Math.random() * 200;
+      }
+      
+      update() {
+        this.life++;
+        this.x += this.vx;
+        this.y += this.vy;
+        
+        // Bounce off edges
+        if (this.x < 0 || this.x > canvas.width) {
+          this.vx *= -0.8;
+          this.x = Math.max(0, Math.min(this.x, canvas.width));
+        }
+        
+        if (this.y < 0 || this.y > canvas.height) {
+          this.vy *= -0.8;
+          this.y = Math.max(0, Math.min(this.y, canvas.height));
+        }
+        
+        // Fade effect
+        this.size = this.originalSize * (0.5 + 0.5 * Math.sin(this.life * 0.05));
+        
+        if (this.life > this.maxLife) {
+          this.reset();
+        }
+      }
+      
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        
+        // Glow effect
+        ctx.shadowBlur = this.size * 2;
+        ctx.shadowColor = this.color;
+      }
+    }
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    function createParticles(count) {
+      particles = [];
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Update hue for color cycling
+      hue = (hue + 0.5) % 360;
+      
+      // Draw particles
+      ctx.shadowBlur = 0;
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      
+      requestAnimationFrame(animate);
+    }
+
+    // Initialize
+    createParticles(particleCount);
+    animate();
+
+    // Particle count controls
+    document.getElementById('increase-particles').addEventListener('click', () => {
+      particleCount = Math.min(500, particleCount + 50);
+      document.getElementById('particle-count').textContent = particleCount;
+      createParticles(particleCount);
+    });
+
+    document.getElementById('decrease-particles').addEventListener('click', () => {
+      particleCount = Math.max(20, particleCount - 50);
+      document.getElementById('particle-count').textContent = particleCount;
+      createParticles(particleCount);
+    });
+
+    // Mouse interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    let isMouseActive = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      isMouseActive = true;
+      
+      // Add repulsion effect
+      particles.forEach(p => {
+        const dx = p.x - mouseX;
+        const dy = p.y - mouseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 100) {
+          const force = (100 - distance) / 50;
+          p.vx += dx / distance * force;
+          p.vy += dy / distance * force;
+        }
+      });
+    });
+
+    // Reset mouse active flag after period of inactivity
+    setInterval(() => {
+      isMouseActive = false;
+    }, 1000);
+  </script>
+</body>
+</html>
